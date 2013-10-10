@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8;">
+		<script  src="scripts/jquery-latest.js"></script>
+		<script>
+		$(document).ready(function(){
+			$("p").click(function(){
+				$(this).hide();
+			});
+			
+			$("button#hide").click(function(){
+				$("p.btn").hide("fast");
+			});
+			
+			$("button#show").click(function(){
+				$("p.btn").show("fast");
+			});
+			
+			$("button#toggle").click(function(){
+				$("#btn1").toggle("fast");
+			})
+			
+			$("button#fadeIn").click(function(){
+				$("#div1").fadeIn();
+				$("#div2").fadeIn("slow");
+				$("#div3").fadeIn(3000);
+			});
+			
+			$("button#fadeOut").click(function(){
+				$("#div1").fadeOut();
+				$("#div2").fadeOut("slow");
+				$("#div3").fadeOut("fast");
+			});
+			
+			$("button#fadeToggle").click(function(){
+				$("#div1").fadeToggle();
+				$("#div2").fadeToggle("slow");
+				$("#div3").fadeToggle(3000);
+			});
+			
+			$("button#fadeTo").click(function(){
+				$("#div1").fadeTo("slow",0.15);
+				$("#div2").fadeTo("slow",0.4);
+				$("#div3").fadeTo("slow",0.7);
+			});
+			
+			$("button#showjuery").on("click",function(){ 
+			  var version = $().jquery;
+			  alert("You are running jQuery version: " + version);
+			});
+			
+			$("#getOffset").click(function(){
+				var x = $("#offset").offset();    
+				$("#span1").text(x.left);
+				$("#span2").text(x.top);
+			})
+			
+			$("#getPosition").click(function(){
+				var x = $("#offset").position();    
+				$("#span1").text(x.left);
+				$("#span2").text(x.top);
+			})
+			
+			$("#removeStyle").click(function(){
+				 $("p.angle").removeAttr("style");
+			})
+			
+			$("#toggleClass").click(function(){
+				$("#rem").toggleClass("main");	
+			})
+			
+			$("#dujia").click(function(){
+				$("p.dujia:first").addClass("intro");
+			})
+			
+		});
+		
+		</script>
+		<style>
+		.main{background:green;font-size:15/20px;}
+		.intro{color:red;font-size:180%;}
+		</style>
+	</head>
+<body>
+	<p>如果点击我，我就会消失!</p>
+	<p class="btn">要想让我消失，你就点击“消失”</p>
+	<p id="btn1">看看我会展开，也会折叠</p>
+	<button type="button" id="hide">消失</button>
+	<button type="button" id="show">显示</button>
+	<button type="button" id="toggle">展开/折叠</button>
+	<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div>
+	<br>
+	<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div>
+	<br>
+	<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+	
+	<button id="fadeIn">点击这里，使三个矩形淡入</button>
+	<button id="fadeOut">点击这里，使三个矩形淡出</button>
+	<button id="fadeToggle">点击这里，使三个矩形淡入淡出</button>
+	<button id="fadeTo">点击这里，使三个矩形fadeTo淡入</button>
+	
+	<button id="showjuery">显示版本号</button>
+	
+	<p id="offset">本段落的偏移是 <span id="span1">unknown</span> left 和 <span id="span2">unknown</span> top。</p>
+	<button id="getOffset">获得 offset</button>
+	<button id="getPosition">获得 position</button>
+	
+	<p class="angle" style="background-color:red;font-size:150%;">天使的翅膀</p>
+	<p class="angle">天使的翅膀</p>
+	<button id="removeStyle">删除所有 p 元素的 style 属性</button>
+	
+	<p id="rem">回忆总是美好的</p>
+	<button id="toggleClass">切换某p的class</button>
+	
+	<p class="dujia">独家记忆</p>
+	<p class="dujia">独家记忆</p>
+	<p class="dujia">独家记忆</p>
+	<button id="dujia">给第一个p添加class“intro”</button>
+	
+</body>
+</html>
