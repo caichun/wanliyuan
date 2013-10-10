@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link  href="main.css"  type="text/css"   rel="stylesheet"/>
+		<link href="http://news.qq.com/base2011/css/qq.css" rel="stylesheet" type="text/css">
+		<!-- tab菜单 -->
+		 <script language='javascript'>
+	     function tab(n)
+		 {
+				var tabnav="tab"+n;
+				var tabid="tabid"+n;
+				cleardisplay();
+				document.getElementById(tabid).style.display="block";
+		}
+		 function cleardisplay()
+		 {
+			for (i=1;i<4;i++)
+				{
+					var cleartabid="tabid"+i;
+					document.getElementById(cleartabid).style.display="none";
+				}
+		}
+	</script>
+  <script src="link.js" type="text/javascript"></script>
+	</head>
+	<body>
+		
+		<div id="main">
+			<table  id="sider">
+				<tr>
+					<td colspan="3" id="sider_types">
+					  <div id="shop_cart">
+						<span id="shop_cart_font">购物车</span>
+						<span id="shop_cart_amount">3</span>
+						<span id="shop_cart_unit">件</span> 
+						<a href="#">去结算</a>
+					  </div>
+						<ul>
+							<li id="sider_1"><a href="#">全部票务分类</a></li>
+							<li id="sider_2"><a href="#">首页</a></li>
+							<li id="sider_3"><a href="#">合作品牌</a></li>
+							<li id="sider_4"><a href="#">个人中心</a></li>
+							<li style="float:right"></li>
+						</ul>
+						 
+					</td>
+				</tr>
+				<tr>
+					<td id="sider_left">
+						<div>
+						<div id="btn_contain">
+							<a href="#"> 电影 </a>
+							<a href="#"> 演唱会 </a>
+							<a href="#"> 音乐会/剧 </a>
+							<a href="#"> 话剧 </a>
+							<a href="#"> 歌剧芭蕾 </a>
+							<a href="#"> 戏曲杂技 </a>
+							<a href="#"> 儿童亲子 </a>
+							<a href="#"> 会展体育 </a>
+							<a href="#"> 旅游景点 </a>
+						</div>
+			
+					<form action="" method="post"  name="sider_search"  id="sider_search">
+						<div id="sider_keyword_div"><input  type="text"  name="sider_keyword" id="sider_keyword" value="请输入电影、演出"/></div>
+						<div id="sider_search_div">	<input  type="image"  src="images/sider_search.gif"  name="sider_search_btn" id="sider_search_btn"/>	</div>				
+					</form>
+					<div  id="sider_search_content" >范玮琪 五月天 陈奕迅</div>
+					</div>
+				</td>
+				<td  id="sider_pics">
+					<div class="focus"> 
+						<div class="turn"> 
+							<div id="adpica"> 
+								<div class="show"> 
+								<a href="#"> 
+								<img  src="images/turn_1.jpg"></a>
+								</div> 
+								<div style="display: none;" class="hidden"> 
+								<a href="#"> 
+								<img  src="images/turn_2.jpg"></a>
+								</div> 
+								<div class="hidden" style="display: none;"> 
+								<a href="#"> 
+								<img  src="images/turn_3.jpg"></a>
+								</div> 
+								<div class="hidden" style="display: none;"> 
+								<a href="#"> 
+								<img  src="images/turn_4.jpg"></a>
+								</div> 
+								<div class="hidden" style="display: none;"> 
+								<a href="#"> 
+								<img   src="images/turn_5.jpg"></a>
+								</div> 
+								<div class="hidden" style="display: none;"> 
+								<a href="#"> 
+								<img   src="images/turn_6.jpg"></a>
+								</div> 
+							</div> 
+							<div id="adtipa"> 
+								<ul onmouseout="change()"> 
+								<li class="current" onmouseover="adchangea(1)"> </li> 
+								<li class="" onmouseover="adchangea(2)"></li> 
+								<li class="" onmouseover="adchangea(3)"> </li> 
+								<li class="" onmouseover="adchangea(4)"></li>
+								<li class="" onmouseover="adchangea(5)"></li>
+								<li class="" onmouseover="adchangea(6)"></li>
+								</ul> 
+							</div> 
+							
+						</div> 
+					</div> 
+				</td>
+				<td  id="sider_right">
+				
+				<table>
+						<tr><td>
+							<table id="sider_right_top">
+								<tr><td  class="sider_right_head"  colspan="2">公告资讯</th></tr>
+								<tr><td  colspan="2" class="sider_right_content">
+								[04.31] 移动票务再次重磅</td></tr>
+								<tr><td  colspan="2" class="sider_right_content">[04.31] 移动票务再次重磅</td></tr>
+							</table>
+						</td></tr>
+						<tr><td>
+				<table  id="sider_right_bottom">	
+						<tr><td  class="sider_right_head" colspan="2">快速购买通道</th></tr>
+						<tr>	
+						<td  class="sider_right_title">分类：</td>
+						<td  class="sider_right_select">
+						<div class="select_style">
+						  <SELECT ID="x1" NAME="x1">
+						<OPTION selected></OPTION>
+						</SELECT>
+						</div>
+					</td></tr>
+					<tr>
+							<td class="sider_right_title">商品：</td>
+							<td  class="sider_right_select">
+					<div class="select_style">
+					<SELECT ID="x2" NAME="x2"  >
+					<OPTION selected>-请选择-</OPTION>
+					</SELECT></div>
+					</td>
+					</tr>
+					<tr>
+							<td class="sider_right_title">门店：</td>
+							<td class="sider_right_select">
+							<div class="select_style">
+						   <SELECT ID="x3" NAME="x3"  >
+							<OPTION selected>-请选择-</OPTION>
+							</SELECT>
+							</div>
+					</td>
+					</tr>
+					<tr>
+							<td class="sider_right_title">日期：</td>
+							<td class="sider_right_select">
+							<div class="select_style">
+							 <SELECT ID="x4" NAME="x4">
+							<OPTION selected>-请选择-</OPTION>
+							</SELECT>
+							</div>
+					</td>
+					</tr>
+					<tr>
+							<td class="sider_right_title">场次：</td>
+							<td class="sider_right_select">
+							<div class="select_style">
+							<SELECT ID="x5" NAME="x5">
+							<OPTION selected>-请选择-</OPTION>
+							</SELECT>
+							</div>
+					</td></tr>
+					<tr>
+							<td class="sider_right_end">票券名:</td>
+							<td class="sider_right_end">环太平洋</td></tr>
+					<tr>
+							<td class="sider_right_end">价格：</td>
+							<td class="sider_right_end"  style="color:#8ec430;font-weight:bold">40.00</td>
+						</tr>
+				</table>
+			   </td></tr>
+					
+			</table> 
+						
+					</div>
+				</td></tr>
+			</table>
+			<div  id="mobile_recomm">
+						<div id="tab">
+							<a id="tab1" onclick="tab(1)">人气热卖</a>
+							<a id="tab2" onclick="tab(2)">新品上架</a>
+							<a id="tab3" onclick="tab(3)">即将上演</a>
+						</div>
+						<h2  height="30px">移动推荐</h2>
+						<div id='tabid1' class='tabid'>
+							<ul>   
+							 <li><a href="#"><img src="images/mobile_1.jpg" /></a><span>星期天小镇</span><span>全天</span></li>  
+							 <li><a href="#"><img src="images/mobile_2.jpg" /></a><span>喜剧《江湖学院》</span><span>2013-09-12</span></li>   
+							 <li><a href="#"><img src="images/mobile_3.jpg" /></a><span>2013史密斯飞船世...</span><span>2013-08-21</span></li>
+							 <li><a href="#"><img src="images/mobile_4.jpg" /></a><span>萧敬腾x何韵诗上海...</span><span>2013-08-31</span></li>
+							 <li><a href="#"><img src="images/mobile_5.jpg" /></a><span>喜剧《江湖学院》</span><span>2013-09-12</span></li>
+							</ul>
+						</div>
+						<div id='tabid2' class='tabid' style='display:none;background-color:blue;'>
+							<ul>   
+							<li><a href="#"><img src="images/mobile_6.jpg" /></a><span>2013史密斯飞船世...</span><span>2013-08-21</span></li>
+							<li><a href="#"><img src="images/mobile_7.jpg" /></a><span>星期天小镇</span><span>全天</span></li>  
+							<li><a href="#"><img src="images/mobile_8.jpg" /></a><span>喜剧《江湖学院》</span><span>2013-09-12</span></li>   
+							<li><a href="#"><img src="images/mobile_9.jpg" /></a><span>萧敬腾x何韵诗上海...</span><span>2013-08-31</span></li>
+							<li><a href="#"><img src="images/mobile_10.jpg" /></a><span>喜剧《江湖学院》</span><span>2013-09-12</span></li>
+							</ul>
+						</div>
+						<div id='tabid3' class='tabid' style='display:none;background-color:green;'>
+							<ul>   
+							 <li><a href="#"><img src="images/mobile_11.jpg" /></a><span>喜剧《江湖学院》</span><span>2013-09-12</span></li>   
+							 <li><a href="#"><img src="images/mobile_12.jpg" /></a><span>2013史密斯飞船世...</span><span>2013-08-21</span></li>
+							 <li><a href="#"><img src="images/mobile_13.jpg" /></a><span>萧敬腾x何韵诗上海...</span><span>2013-08-31</span></li>
+							 <li><a href="#"><img src="images/mobile_14.jpg" /></a><span>喜剧《江湖学院》</span><span>2013-09-12</span></li>
+							 <li><a href="#"><img src="images/mobile_15.jpg" /></a><span>星期天小镇</span><span>全天</span></li>  
+							</ul>
+						</div>
+					
+				
+				
+			</div>
+			
+			<div id="great_movie"  class="floor_pics">
+				<h2><a href="#"><img src="images/first_floor.gif" alt="精彩电影"/></a>精彩电影</h2>
+				<table>
+					<tr>
+						<td class="floor_pics_img"><a><img src="images/movie.jpg" /></a></td>
+						<td class="floor_pics_detail">
+						<ul>   
+						 <li><a href="#"><img src="images/movie_1.jpg" /></a><span>战马</span><span>2013-09-12</span></li>  
+						 <li><a href="#"><img src="images/movie_2.jpg" /></a><span>听风者</span><span>2013-09-12</span></li>   
+						 <li><a href="#"><img src="images/movie_3.jpg" /></a><span>老雷斯的故事</span><span>2013-09-12</span></li>
+						 <li><a href="#"><img src="images/movie_4.jpg" /></a><span>麦兜当当伴我心</span><span>2013-09-12</span></li>
+						 <li><a href="#"><img src="images/movie_5.jpg" /></a><span>神探亨特张</span><span>2013-09-12</span></li>
+						 <li><a href="#"><img src="images/movie_6.jpg" /></a><span>诸神之怒</span><span>2013-09-12</span></li>
+						 <li><a href="#"><img src="images/movie_7.jpg" /></a><span>搞定岳父大人</span><span>2013-09-12</span></li>
+						 <li><a href="#"><img src="images/movie_8.jpg" /></a><span>晚秋</span><span>2013-09-12</span></li>
+						</ul>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+			
+			<div id="hot_show" class="floor_pics">
+				<h2><img src="images/second_floor.gif" alt="热门演出"/>热门演出</h2>
+				<table>
+					<tr>
+						<td class="floor_pics_detail">
+						<ul>   
+						 <li><a href="#"><img src="images/show_1.jpg" /></a><span>FanFan范玮琪</span><span>2013-09-12</span></li>  
+						 <li><a href="#"><img src="images/show_2.jpg" /></a><span>罗志祥舞法舞天</span><span>2013-09-12</span></li>   
+						 <li><a href="#"><img src="images/show_3.jpg" /></a><span>莎拉 寇娜</span><span>2013-09-12</span></li>
+						 <li><a href="#"><img src="images/show_4.jpg" /></a><span>王力宏 MUSIC MAN</span><span>2013-09-12</span></li>
+						 <li><a href="#"><img src="images/show_5.jpg" /></a><span>FIR-创世纪演唱会</span><span>2013-09-12</span></li>
+						 <li><a href="#"><img src="images/show_6.jpg" /></a><span>JONAS BROTHERS</span><span>2013-09-12</span></li>
+						 <li><a href="#"><img src="images/show_7.jpg" /></a><span>英国传奇民谣乐队</span><span>2013-09-12</span></li>
+						 <li><a href="#"><img src="images/show_8.jpg" /></a><span>MADEOA玩转电子乐</span><span>2013-09-12</span></li>
+						</ul>
+						</td>
+						<td class="floor_pics_img"><a><img src="images/show.jpg" /></a></td>
+					</tr>
+				</table>
+			</div>
+			
+			<div id="scenic_spots"  class="floor_pics">
+				<h2><a href="#"><img src="images/third_floor.gif" alt="旅游景点"/></a>旅游景点</h2>
+				<table>
+					<tr>
+						<td class="floor_pics_img"><a><img src="images/scenic.jpg" /></a></td>
+						<td class="floor_pics_detail">
+						<ul>   
+						 <li><a href="#"><img src="images/scenic_1.jpg" /></a><span>M2酒吧</span><span>全天</span></li>  
+						 <li><a href="#"><img src="images/scenic_2.jpg" /></a><span>沙特馆-VIP票</span><span>全天</span></li>   
+						 <li><a href="#"><img src="images/scenic_3.jpg" /></a><span>欢乐谷</span><span>全天</span></li>
+						 <li><a href="#"><img src="images/scenic_4.jpg" /></a><span>世博会沙特馆月亮船</span><span>全天</span></li>
+						 <li><a href="#"><img src="images/scenic_5.jpg" /></a><span>海底世界</span><span>全天</span></li>
+						 <li><a href="#"><img src="images/scenic_6.jpg" /></a><span>诸神之怒</span><span>全天</span></li>
+						 <li><a href="#"><img src="images/scenic_7.jpg" /></a><span>杜莎夫人蜡像馆</span><span>全天</span></li>
+						 <li><a href="#"><img src="images/scenic_8.jpg" /></a><span>镜银七滑雪场</span><span>全天</span></li>
+						</ul>
+						</td>
+					</tr>
+				</table>
+				
+			</div>
+		</div>
+		<div id="footer">
+			<div id="footer_logo">
+				<ul>
+					<li><img id="footer_logo_img" src="images/footer_logo.jpg" alt=""/></li>
+					<li id="footer_logo_1"><h2>移动品质 安全放心</h2><p>移动票务安全认证</p></li>
+					<li id="footer_logo_2"><h2>在线选座</h2><p>足不出户亲手选择您心仪的座位</p></li>
+					<li id="footer_logo_3"><h2>手机电子票</h2><p>为您省去运费和等待的时间，快速便捷</p></li>
+				</ul>
+			</div>
+			
+			<table id="footer_tips">
+				<tr>
+					<td class="footer_tips_content"><span>账户安全</span><ul><li>在线订购</li><li>电话订购</li></ul></td>
+					<td class="footer_tips_content"><span>订购方式</span><ul><li>注册会员</li><li>订购流程</li></ul></td>
+					<td class="footer_tips_content"><span>配送方式</span><ul><li>支持电子票券</li><li>快递送货</li><li>现场使用</li></ul></td>
+					<td class="footer_tips_content"><span>支付方式</span><ul><li>手机话费</li><li>网银支付</li><li>手机支付</li></ul></td>
+					<td class="footer_tips_content"><span>订货说明</span><ul><li>退换票说明</li></ul></td>
+					<td><span>常见问题</span><ul><li>联系我们</li><li>找回密码</li></ul></td>
+				</tr>
+			</table>
+			<div id="share">
+				<a href="#" alt=""><img src="images/share_1.gif" /></a><span>分享到</span>
+				<a href="#" alt=""><img src="images/share_2.gif" /></a>
+				<a href="#" alt=""><img src="images/share_3.gif"/></a>
+				<a href="#" alt=""><img src="images/share_4.gif" /></a>
+			</div>
+			<div id="footer_content">
+			<p><a href="#"  title="">网站地图</a> | <a href="#"  title="">友情链接</a> | 
+			<a href="#"  title="">关于无线城市</a> | <a href="#"  title="">意见反馈</a> | 
+			<a href="#"  title="">服务声明</a> | <a href="#"  title="">常见问题</a></p>
+			<p>中国移动通信版权所有 粤08034647-12号</p>
+			</div>
+		</div>
+		 
+		<script> 
+		
+		<!---图片轮换效果的js代码-->
+		//鼠标移过来的动作。显示当前图片，清除轮询。 
+		function adchangea(adid) { 
+		dochange(adid); 
+		clearTimeout(adisround); 
+		} 
+		//自动轮询 
+		function adchangea2(adid) { 
+		dochange(adid); 
+		var adbigimg = document.getElementById("adpica").getElementsByTagName("div"); 
+		if ((adnext = adid + 1) > adbigimg.length) adnext = 1; 
+		adisround = setTimeout('adchangea2(' + adnext + ')', 3000); 
+		} 
+		//显示当前图片 
+		function dochange(adid) { 
+		id = adid; 
+		var adbigimg = document.getElementById("adpica").getElementsByTagName("div"); 
+		var adsmallimg = document.getElementById("adtipa").getElementsByTagName("li"); 
+		for (var adi = 0; adi < adbigimg.length; adi++) { 
+		adbigimg[adi].className = "hidden"; 
+		adsmallimg[adi].className = ""; 
+		} 
+		adbigimg[adid - 1].className = "show"; 
+		adsmallimg[adid - 1].className = "current"; 
+		} 
+		var adisround = setTimeout("adchangea2(2)", 3000); 
+		var id;//当前激活id 
+		//鼠标移开ul块时，恢复轮询 
+		function change() { 
+		adchangea2(id); 
+		} 
+		
+		
+		
+		</script> 
+<!-- 	<script type="text/javascript" src="js/citys.js"></script>
+	<script type="text/javascript" src="js/weather.js"></script> -->
+	</body>
+	<script src="data.js" type="text/javascript"></script>
+</html>
