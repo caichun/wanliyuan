@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>纯CSS打造的圆角边框</title>
+<style type="text/css">
+#main h1, #main h2, #main p {margin:0 10px; letter-spacing:1px; padding:0;}
+#main h1 {font-size:2.5em; color:#A95051;}
+#main h2 {font-size:2em;color:#7B793B; border:0;}
+#main p {padding-bottom:0.5em;}
+#main h2 {padding-top:0.5em;}
+#main {background: transparent; margin:25px 1em 100px 1em;}
+
+
+.xtop, .xbottom {display:block; background:transparent; font-size:1px;}
+.xb1, .xb2, .xb3, .xb4 {display:block; overflow:hidden;}
+.xb1, .xb2, .xb3 {height:1px;}
+.xb2, .xb3, .xb4 {background:#FFF; border-left:1px solid #A93298; border-right:1px solid #A93298;}
+.xb1 {margin:0 5px; background:#A93298;}
+.xb2 {margin:0 3px; border-width:0 2px;}
+.xb3 {margin:0 2px;}
+.xb4 {height:2px; margin:0 1px;}
+
+.xboxcontent {display:block; background:#FFF; border:0 solid #A93298; border-width:0 1px;}
+
+
+.css3
+{
+	border:1px solid #A93298;
+	border-radius:6px;
+	-moz-border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+<div id="main">
+			<b class="xtop"><b class="xb1"></b><b class="xb2"></b><b class="xb3"></b><b class="xb4"></b></b>
+			<div class="xboxcontent">
+			<p>纯CSS打造的圆角边框，兼容性非常的强 <br />纯CSS打造的圆角边框</p>
+
+			<h2>教授带学生做实验</h2>
+			<p>某日，教授带着一班学生到实验室，指着一个装满尿的烧杯说：“
+要想做一个好的生物学家，既要有勇敢的精神，又要有敏锐的观察力。
+你们像我一样试一试。”说着，教授把手指伸进尿液，然后放到口中尝一尝。同学们
+见到教授带了头，便硬着头皮尝试着。结果是丑态百出。
+这时，教授笑道：“你们真是勇敢有余，观察不足。你们没注意，我伸进烧杯的是食指，放入
+口中的是中指吧！”
+</p>
+
+			<p>某日，天晴，老爸拉着儿子去爬山，父子俩爬了两个小时终于到山顶，
+爸爸：“儿子，你看，山下的风景多美啊！”
+儿子：“既然山下的风景美，我们为什么还要爬到山顶上来呢？”
+.</p>
+			</div>
+			<b class="xbottom"><b class="xb4"></b><b class="xb3"></b><b class="xb2"></b><b class="xb1"></b></b>
+			</div>
+			
+			<!-- 自行用另一种方式来写边框圆角 -->
+			<div  class="css3">
+			<p>
+						某日，教授带着一班学生到实验室，指着一个装满尿的烧杯说：“
+			要想做一个好的生物学家，既要有勇敢的精神，又要有敏锐的观察力。
+			你们像我一样试一试。”说着，教授把手指伸进尿液，然后放到口中尝一尝。同学们
+			见到教授带了头，便硬着头皮尝试着。结果是丑态百出。
+			这时，教授笑道：“你们真是勇敢有余，观察不足。你们没注意，我伸进烧杯的是食指，放入
+			口中的是中指吧！”
+			</p>
+			</div>
+</body>
+</html>
