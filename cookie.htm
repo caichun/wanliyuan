@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>js COOKIE 记住帐号或者uuid</title>
+<script type="text/javascript">
+	
+	var url = window.location.href;
+	document.write("url:"+url);
+
+	function guidGenerator() 
+		{
+			var S4 = function() {
+			return (((1+Math.random())*0x10000)|0).toString(16).substring(1);};
+			return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
+		}
+			
+	var cookie = {};
+	cookie.set = function(n, v, t){
+		var exp  = new Date();
+		exp.setTime(exp.getTime() + (t||24)*60*60*1000);
+		document.cookie = n + "="+ escape(v) + ";expires=" + exp.toGMTString()+';path=/';
+	}
+
+	cookie.get = function(n){
+		 var arr = document.cookie.match(new RegExp("(^| )"+ n +"=([^;]*)(;|$)"));
+		 if(arr != null) return unescape(arr[2]);
+		 return null;
+	}
+	
+	test = function(){
+		var co = cookie.get('uuid');
+		if(co!=null)
+		{
+			alert('读取Cookie test的值为:\n'+cookie.get('uuid'));
+		}
+		else
+		{
+			cookie.set('uuid', guidGenerator());
+			alert('写入Cookie成功!');
+			alert('读取Cookie test的值为:\n'+cookie.get('uuid'));
+		}
+	}
+    test();
+	
+	
+	
+</script>
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
