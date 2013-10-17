@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+</head>
+<body>
+	<div id="errorCode">11
+	</div>		
+	
+	<script type="text/javascript" >
+		var errorCodeEle = document.getElementById("errorCode");
+		var errorCode;
+	    if(errorCodeEle != null) {
+			errorCode = errorCodeEle.innerHTML;
+		} else {
+			errorCode = "empty";
+		}
+		
+		var monitorUrl = 'errorcode:'+errorCode;
+		alert(monitorUrl);
+    </script>	
+</body>
