@@ -1,0 +1,99 @@
+<html>
+	<head>
+		<title>jshow for bootstrap, ui框架，弹窗更容易</title>
+		<link rel="stylesheet" type="text/css" href="http://sandbox.runjs.cn/uploads/rs/316/df6enwiz/bootstrap-modal.css">
+		<link id="bootstrap_221" rel="stylesheet" type="text/css" class="library" href="bootstrap/css/bootstrap.min.css">
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		
+		<script id="jquery_172" type="text/javascript" class="library" src="scripts/jquery-1.10.2.min.js"></script>
+		<script id="bootstrap_221" type="text/javascript" class="library" src="bootstrap/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/316/df6enwiz/bootbox.js"></script>
+		<script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/316/df6enwiz/form.validate.js"></script>
+		<script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/316/df6enwiz/bootstrap-modal.js"></script>
+		<script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/316/df6enwiz/bootstrap-modalmana.js"></script>
+		<script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/316/df6enwiz/modal.manager.plugi.js"></script>	
+		<script type="text/javascript" src="http://sandbox.runjs.cn/uploads/rs/316/df6enwiz/jshow.utils.js"></script>
+		<style>
+			.auto-height-body{ max-height:460px;_height:460px; overflow-y:auto;}
+			.message_remind_form{color:#999; margin:7px 0 0 5px;}
+			.message_remind_form.current{color:#333;}
+		</style>
+		
+		<script>
+		$(document).ready(function(){
+		
+			$("#bootbox-alert").click(function(){
+					bootbox.alert('你点击了alert按钮',function(){
+					message_box.show('这是bootbox alert方法后的回调函数，也可以不要！');
+				});
+			});
+
+		
+			$("#bootbox-confirm").click(function(){
+					bootbox.confirm('你确定执行这个操作么？',function(rs){
+					if(rs){
+						message_box.show('你点击了确定按钮！','success');
+					}else{
+					 message_box.show('你取消了本次操作！');
+					}
+				});
+			});
+
+			$("#openDialog").click(function(){
+				gDialog.fCreate({title:'这是一个弹窗窗口',url:'/uploads/rs/316/df6enwiz/myDialog.json'}).show();
+			});
+
+			$("#openManyDialog").click(function(){
+					gDialog.fCreate({title:'这是多层弹窗窗口',url:'/uploads/rs/316/df6enwiz/manywindow.json'}).show();
+			});
+
+			$("#formDialog").click(function(){
+			  gDialog.fCreate({title:'表单验证窗口',url:'/uploads/rs/316/df6enwiz/formValidate.json'}).show();
+
+			});
+
+		})
+		</script>
+		
+	</head>
+	
+ <body>
+	 
+	 <h1> jshow for bootstrap前端框架 </h1>
+ 	 <p class="lead">让弹窗更简单，更方便... 窗口在关闭的时候，同时回收dom节点，bootstrap原始的modal插件是不会回收dom节点的。
+		 此外，可通过设置reuse:true 则不回收dom节点，实现dialog的多次使用。 
+	</p>
+
+	 <br/>
+	 	 <p class="lead"> 1. bootbox插件，主要包括alert和confirm两个组件</p>
+	 <a href="#nogo" id="bootbox-alert" class="btn btn-primary">调用bootbox的alert</a>
+	 
+	 <a href="#nogo" id="bootbox-confirm" class="btn btn-primary">调用bootbox的confirm</a>
+	 
+	 
+	 
+	 
+	 <br/>
+	 <br/>
+	 <p class="lead">2. 对modalManager进行封装后的，更加方便易用的弹窗</p>
+	 <a href="#nogo" id="openDialog" class="btn  btn-info">很简单的JS点击弹窗</a> 
+	 <a href="#nogo" id="openManyDialog" class="btn  btn-info">弹多层窗口</a> 
+	
+	 
+	 <br/>
+	 <p class="lead">自己开发的表单验证框架，简单方便，美观大方！</p>
+	 <a href="#nogo" id="formDialog" class="btn btn-primary">表单验证窗口</a> 
+		
+	 
+	 <br/>
+	  <p class="lead">message_box.show(''), 显示你自己的提示消息！</p>
+	 	<a href="#nogo"  class="btn btn-info" onclick="message_box.show('<h4>信息</h4>只是一个提示消息！','info');">信息提示</a> 
+		<a href="#nogo"  class="btn btn-warning" onclick="message_box.show('<h4>警告</h4>只是一个提示消息！');">警告提示 默认</a> 
+	 	<a href="#nogo"  class="btn btn-success" onclick="message_box.show('<h4>成功</h4>只是一个提示消息！','success');">成功提示</a> 
+	 	<a href="#nogo"  class="btn btn-danger" onclick="message_box.show('<h4>失败</h4>只是一个提示消息！','error');">失败或错误提示</a> 
+
+	 
+	 
+ </body>
+</html>	
+	
