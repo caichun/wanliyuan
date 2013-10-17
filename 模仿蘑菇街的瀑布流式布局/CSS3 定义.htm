@@ -1,0 +1,115 @@
+
+<!-- div版的css3定义的瀑布布局 -->
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>CSS3瀑布布局</title>
+<style>
+        .container{
+                -webkit-column-width:160px;
+                -moz-column-width:160px;
+                -o-colum-width:160px;
+                -webkit-column-gap:1px;
+                -moz-column-gap:1px;
+                -o-column-gap:1px;
+
+        }
+        div:not(.container){
+                -webkit-border-radius:5px;
+                -moz-border-radius:5px;
+                border-radius:5px;
+                background:#D9D9D9;
+                border::#CCC 1px solid;
+                display:inline-block;
+                width:157px;
+                position:relative;
+                margin:2px;
+        }
+        .title{
+                 line-height:80px; font-size:18px; color:#900;
+                 text-align:center;
+                 font-family:"Microsoft YaHei";
+        }
+</style>
+
+				<!-- -webkit-column-count: 6;
+				-moz-column-count:6;
+				-o-column-count:6;  -->
+</head>
+<body>
+<section>
+        <div class="container">
+            <div style="height:80px" class="title">纯CSS3瀑布布局</div>
+			<div style="height:260px">1</div>
+			<div style="height:65px">2</div>
+			<div style="height:120px">3</div>
+			<div style="height:145px">4</div>
+			<div style="height:90px">5</div>
+			<div style="height:145px">6</div>
+			<div style="height:160px">7</div>
+			<div style="height:65px">8</div>
+			<div style="height:230px">9</div>
+			<div style="height:140px">10</div>
+			<div style="height:85px">11</div>
+			<div style="height:20px">12</div>
+			<div style="height:145px">13</div>
+			<div style="height:50px">14</div>
+            <div style="height:65px">15</div>
+			<div style="height:230px">16</div>
+			<div style="height:140px">17</div>
+			<div style="height:85px">18</div>
+			<div style="height:20px">19</div>
+			<div style="height:145px">20</div>
+			<div style="height:50px">21</div>
+			<div style="height:145px">22</div>
+			<div style="height:160px">23</div>
+			<div style="height:240px">24</div>
+			<!-- <div style="height:120px">25</div> -->
+    </div>
+</section>
+</body>
+</html>  
+
+
+<!-- 简易版的css3定义的瀑布式布局 -->
+<!-- <!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>布局</title>
+<style>
+ul{
+	-webkit-column-width:160px;
+	-moz-column-width:160px;
+	-o-colum-width:160px;
+	column-width:160px;
+	-webkit-column-gap:1px;
+	-moz-column-gap:1px;
+	-o-column-gap:1px;
+	column-gap:1px;
+}
+li{
+	background:#0CF;
+	border:#069 1px solid;
+	display:inline-block;
+	width:150px;
+	margin:5px 0;
+}
+</style>
+</head>
+<body>
+	<ul>
+		<li style="height:50px">1</li>
+		<li style="height:100px">2</li>
+		<li style="height:80px">3</li>
+		<li style="height:60px">4</li>
+		<li style="height:70px">5</li>
+		<li style="height:50px">6</li>
+		<li style="height:100px">7</li>
+		<li style="height:80px">8</li>
+		<li style="height:90px">9</li>
+		<li style="height:30px">10</li>
+	</ul>
+</body>
+</html>  -->
