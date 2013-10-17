@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+  <!--
+     Author:more
+	 DATE:2013-9-24
+	 DESC:JS添加和删除当前列.
+
+  --->
+  <title> adder</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <style type='text/css'>
+      table ,tr,td
+	  {
+		  border: 1px solid black;
+		  border-collapse:collapse;
+	  }
+	
+	</style>
+    <script type="text/javascript">
+        // 通过id获得对象
+        function $(filed){
+		  return document.getElementById(filed);
+
+		}
+        //获得元素在table中的序号
+		function getElementIndex(field){
+            var  table = $("table1");
+			var intElementIndex = -1;
+			for(var i=0;i<table.rows.length;i++) {
+			  if(table.rows[i]==field){
+			     intElementIndex=i;
+		         break;
+		      }
+		     }
+		   return intElementIndex;
+	   }
+
+       
+       //table.rows.length;//行数
+       //table.rows.cells.length;//列数
+	   //添加一行
+		function addRow(filed){
+		  var tr = $("tr1");
+		  var  table = $("table1");
+		  var x = table.insertRow(1);
+		  for (var i=0;i<tr.cells.length;i++){
+               var y = x.insertCell(i);
+               y.innerHTML = tr.cells[i].innerHTML;
+		  }
+		}
+        //删除首行外的所有行
+        function delRowAll(field){
+			var  table = $("table1");
+			for  (var i = table.rows.length -1 ;i>0 ;i--){
+			     table.deleteRow(i);
+			}
+
+		}
+
+        //删除当前行
+		function delRow(field){
+		   var  table = $("table1");
+		   var index = getElementIndex(field);
+ 		   table.deleteRow(index);
+		}
+
+    </script>
+
+
+ </head>
+
+ <body>
+   <table id = 'table1'>
+   <tr  id="tr1">
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="text"></td>
+	<td><input type="button" value='添加' onclick='addRow(this)' ></td>
+	<td><input type="button" value='删除' onclick ='delRow(this)'></td>
+   </tr>
+   </table>
+ </body>
+</html>
