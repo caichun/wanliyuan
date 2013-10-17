@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>jQuery实现tab切换--柯乐义</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" >
+    <script type="text/javascript" src="http://keleyi.com/keleyi/pmedia/jquery-1.9.1.min.js"></script>
+<!--演示内容开始-->
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{background:#e3e3e3;height:100%;font:normal normal 12px/24px "Microsoft yahei", Arial;padding-bottom:30px;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#093;text-decoration:none;}
+#title{width:300px;margin:3% auto 0;}
+#title h2{font-size:18px;}
+#wrapper{width:980px;margin:0 auto;background:#f8f8f8;border:1px solid #a3a3a3;padding:20px 20px 50px;border-radius:5px;-moz-border-radius:5px;}
+#wrapper h3{color:#333;font-size:14px;text-align:center;margin:20px 0;}
+/* box */
+.box{width:400px;margin:10px auto 0;background:#fff;border:1px solid #d3d3d3;}
+.tab_menu{overflow:hidden;}
+.tab_menu li{width:100px;float:left;height:30px;line-height:30px;color:#fff;background:#093;text-align:center;cursor:pointer;}
+.tab_menu li.current{color:#333;background:#fff;}
+.tab_menu li a{color:#fff;text-decoration:none;}
+.tab_menu li.current a{color:#333;}
+.tab_box{padding:20px;}
+.tab_box li{height:24px;line-height:24px;overflow:hidden;}
+.tab_box li span{margin:0 5px 0 0;font-family:"宋体";font-size:12px;font-weight:400;color:#ddd;}
+.tab_box .hide{display:none;}
+</style> <script type="text/javascript" src="http://keleyi.com/keleyi/phtml/tabswitch/plus/jquery.tabs.js"></script> 
+</head>
+<body>
+<script type="text/javascript">
+    $(function () {
+        $('.demo2').Tabs({
+        });
+    });	
+</script>
+<div id="wrapper">
+
+<h3>移动鼠标</h3>
+<div class="box demo2">
+<ul class="tab_menu">
+<li class="current">jquery特效</li>
+<li>ASP.NET MVC</li>
+<li>javascript</li>
+<li>.NET</li>
+</ul>
+<div class="tab_box">
+<div>
+<ul>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/768f469b95b61487.htm" title="" >单行文字间歇向上滚动</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/ed5eb8c2959c619e.htm" title="" >滚动页面时DIV到达顶部时固定在顶部</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/a6d651710217f7a0.htm" title="" >使用jQuery UI修饰title属性的气泡悬浮框</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/bf0eb8c02085b10d.htm" title="" >jquery清空textarea等输入框</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/939631bb07adb4dc.htm" title="" >jquery关灯特效</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/f4a6f78d74a251c5.htm" title="" >jquery根据滚动像素显示隐藏顶部导航条</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/7e8897e5ec0849e9.htm" title="" >可改变大小DIV层</a></li>
+</ul>
+</div>
+<div class="hide">
+<ul>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/eb6f273eb3c4cd07.htm" title="在ASP.NET MVC 3 中自定义AuthorizeAttribute时需要注意的页面缓存问题" >在ASP.NET MVC 3 中自定义AuthorizeAttribute时需要注意的页面缓存问题</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/4064796bf1f324c8.htm" title="" >柯乐义留言板：ASP.NET MVC4实例</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/2916901353b081f1.htm" title="" >柯乐义留言板介绍</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/1a9487bbb1cbfc50.htm" title="MVC：从客户端中检测到有潜在危险的 Request.Form 值 的解决方法" >MVC：从客户端中检测到有潜在危险的 Request.Form 值 的解决方法</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/101639c1eb1e991b.htm" title="" >Html.ActionLink重载</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/781ba7719ce323f.htm" title="" >ASP.NET MVC4中使用AJAX</a></li>
+
+</ul>
+</div>
+<div class="hide">
+<ul>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/e7f4d99c87604a8.htm" title="" >JS Trim()</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/5d7f4ac2efa72d30.htm" title="" >菜单滚动至顶部后固定</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/4f6d3873d0571805.htm" title="" >HTML5时钟</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/ceb3c274df032ed5.htm" title="" >javascript onmousedown 事件</a></li>
+<li><span>▪</span><a href="http://keleyi.com/a/bjac/a6e756c811719fff.htm" title="" >在图片上显示左右箭头的翻页代码</a></li>
+<li><span>▪</span><a href="http://keleyi.com/dev/f1d8e1f2f1c95bc0.htm" title="" >window.open的页面刷新上层页面</a></li>
+
+</ul>
+</div>
+<div class="hide">
+<ul>
+<li><span>▪</span><a href="http://keleyi.com/dev/beb40909418eb322.htm" title="" >WinForm 子窗体居中于父窗体代码</a></li>
+<li><span>▪</span><a href="http://keleyi.com/dev/e52563d8ef0c81dd.htm" title="" >.NET常用正则表达式</a></li>
+<li><span>▪</span><a href="http://keleyi.com/dev/b9c46b55ed4b6e0d.htm" title="" >WinForm窗体最大化代码</a></li>
+<li><span>▪</span><a href="http://keleyi.com/dev/887a9ad6042c676.htm" title="" >saveFileDialog 保存文件的后缀</a></li>
+<li><span>▪</span><a href="http://keleyi.com/dev/b6539b6c4146cc53.htm" title="" >ASP.NET验证码生成类</a></li>
+<li><span>▪</span><a href="http://keleyi.com/dev/cb809a6fd56325b8.htm" title="" >tabcontrol 切换(聚焦)选项卡</a></li>
+<li><span>▪</span><a href="http://keleyi.com/dev/908c6faf63374532.htm" title="" >.NET Winform 让picturebox出现滚动条</a></li>
+
+</ul>
+</div>
+</div>
+</div>
+<a href="http://keleyi.com/keleyi/phtml/tabswitch/plus/index.htm">效果0</a> 
+<a href="http://keleyi.com/keleyi/phtml/tabswitch/plus/1.htm">效果1</a> 
+<a href="http://keleyi.com/keleyi/phtml/tabswitch/plus/3.htm">效果3</a> 
+<a href="http://keleyi.com/keleyi/phtml/tabswitch/index.htm" target="_blank">其他效果</a>
+<a href="http://keleyi.com/a/bjac/88af29335890a287.htm" target="_blank">文章</a>
+</div>
+</body>
+</html>
