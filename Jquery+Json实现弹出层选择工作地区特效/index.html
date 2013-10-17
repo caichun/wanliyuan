@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>jquery人才网弹出层选择工作地区特效</title>
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<link href="templates/default/css/common.css" rel="stylesheet" type="text/css" />
+<link href="templates/default/css/resume.css" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type='text/javascript' ></script>
+<script src="templates/default/js/jquery.dialog.js" type='text/javascript' ></script>
+<script src="data/QS_classify.js" type="text/javascript"></script>
+<script src="templates/default/js/jquery.selectlayer.js" type='text/javascript' ></script>
+<script type="text/javascript"> 
+$(document).ready(function(){
+	OpenCategoryLayer("#district_cn","#sel_district","#district_cn","#citycategory",QS_city,14);
+});
+</script>
+</head>
+<body>
+<br />
+<br />
+<div class="resume_search"> <br />
+  <div class="item" style="margin-left:300px;">
+    <input name="district_cn"  id="district_cn" type="text" value="请选择所在地区"  readonly="true" class="sltinput">
+    <input name="citycategory" id="citycategory" type="hidden" value="" />
+    <div  style="display:none" id="sel_district">
+      <div class="OpenFloatBoxBg" ></div>
+      <div class="OpenFloatBox">
+        <div class="title">
+          <h4>请选择工作地区</h4>
+          <div class="DialogClose" title="关闭"></div>
+        </div>
+        <div class="tip">可多选，最多选择8项</div>
+        <div class="content link_lan">
+          <div class="txt">
+            <div class="item" id="593">
+              <label title="浦东" class="titem" >
+              <input  type="checkbox" value="593"  title="浦东" class="b" />
+              浦东 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="598">
+              <label title="长宁" class="titem" >
+              <input  type="checkbox" value="598"  title="长宁" class="b" />
+              长宁 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="564">
+              <label title="宝山" class="titem" >
+              <input  type="checkbox" value="564"  title="宝山" class="b" />
+              宝山 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="589">
+              <label title="青浦" class="titem" >
+              <input  type="checkbox" value="589"  title="青浦" class="b" />
+              青浦 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="617">
+              <label title="普陀" class="titem" >
+              <input  type="checkbox" value="617"  title="普陀" class="b" />
+              普陀 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="618">
+              <label title="闵行" class="titem" >
+              <input  type="checkbox" value="618"  title="闵行" class="b" />
+              闵行 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="599">
+              <label title="卢湾" class="titem" >
+              <input  type="checkbox" value="599"  title="卢湾" class="b" />
+              卢湾 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="590">
+              <label title="闸北" class="titem" >
+              <input  type="checkbox" value="590"  title="闸北" class="b" />
+              闸北 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="572">
+              <label title="嘉定" class="titem" >
+              <input  type="checkbox" value="572"  title="嘉定" class="b" />
+              嘉定 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="575">
+              <label title="上海市区" class="titem" >
+              <input  type="checkbox" value="575"  title="上海市区" class="b" />
+              上海市区 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="588">
+              <label title="虹口" class="titem" >
+              <input  type="checkbox" value="588"  title="虹口" class="b" />
+              虹口 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="item" id="587">
+              <label title="徐汇" class="titem" >
+              <input  type="checkbox" value="587"  title="徐汇" class="b" />
+              徐汇 </label>
+              <div class="sitem"></div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div class="txt">
+            <div class="selecteditem"></div>
+          </div>
+          <div class="txt">
+            <div align="center">
+              <input type="button"  class="but80 Set" value="确定" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+</body>
+</html>
