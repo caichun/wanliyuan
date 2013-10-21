@@ -1,0 +1,88 @@
+<!-- 没写js的页面 -->
+<!-- <html>
+<head>
+    <title>ABC</title>
+	<meta charset=utf-8>
+ </head>
+<body>
+    <p>姓名：
+      <input id="txt_A" type="text"/>
+    性别：
+    <input id="txt_B" type="text">
+</p>
+    <p>
+      <textarea id="txt_C">姓名：
+性别：</textarea>
+        </p>
+</body>
+</html>  -->
+
+
+
+
+<!-- first的js -->
+<html>
+<head>
+    <title>ABC</title>
+	<meta charset=utf-8>
+	<script type="text/javascript">
+	function test(txt, value){
+		var obj = document.getElementById('txt_C');
+		var reg = "  /"+txt+"：.*/g  ";      
+		obj.value = obj.value.replace(eval(reg), txt + '：'+value);
+	}
+	</script>
+ </head>
+<body>
+    <p>
+			姓名：
+		<input id="txt_A" type="text" onkeyup="test('姓名',value)" />
+			性别：
+		<input id="txt_B" type="text" onkeyup="test('性别',value)" />
+    </p>
+    <p>
+      <textarea id="txt_C">姓名：
+性别：
+姓名：
+</textarea>
+        </p>
+		
+</body>
+</html>
+
+
+
+<!-- second的js -->
+<!-- 
+<html>
+<head>
+    <title>ABC</title>
+	<meta charset=utf-8>
+	<script>
+	window.onload=function(){
+		var otxta=document.getElementById("txt_A");
+        var otxtb=document.getElementById("txt_B");
+        var otxtc=document.getElementById("txt_C");
+		otxta.onkeyup=function()
+		{
+			otxtc.value="姓名:"+otxta.value+"\n"+"性别:"+otxtb.value;
+		}
+		otxtb.onkeyup=function()
+		{
+			otxtc.value="姓名:"+otxta.value+"\n"+"性别:"+otxtb.value;
+		}
+	}
+</script>
+ </head>
+<body>
+    <p>姓名：
+      <input id="txt_A" type="text"/>
+    性别：
+    <input id="txt_B" type="text">
+</p>
+    <p>
+      <textarea id="txt_C">姓名：
+性别：</textarea>
+        </p>
+</body>
+</html>  -->
